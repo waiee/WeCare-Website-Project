@@ -1,0 +1,147 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form-container {
+  width: 300px;
+  padding: 10px;
+}
+.form-container textarea {
+  width: 370%;
+  min-height: 200px;
+  border: none;
+  resize: none;
+  padding: 10px;
+  padding-right: 10%;
+  margin: 5px 0 22px 0;
+  background: #f1f1f1;
+  font-size: 15px;
+}
+.form-container textarea:focus {
+  background: #ddd;
+  outline: none;
+}
+.btn-send,
+.btn-close,
+.btn-success {
+  padding: 0%;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: none;
+  width: 100%;
+  opacity: 0.9;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left;
+}
+.btn-send,
+.btn-close,
+.btn-chat:hover {
+  opacity: 1;
+}
+h2 {
+  background: rgb(31, 60, 73);
+  border: 5px black;
+  color: white;
+  width: 500px;
+  padding: 10px;
+  font-size: 100px;
+}
+
+.titlefinish {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.titlefinish h1 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.backtomainpage {
+  display: inline-block;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.backtomainpage :hover {
+  background-color: blueviolet;
+  color: #fff;
+}
+.backtoventpage {
+  display: inline-block;
+  position: relative;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.backtoventpage :hover {
+  background-color: blueviolet;
+  color: #fff;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  cursor: pointer;
+  left: 30px;
+}
+
+.WeCare {
+  position: absolute;
+  color: #fff;
+  font-size: 50px;
+  top: 10px;
+  left: 120px;
+  background-color: transparent;
+}
+
+.homebtn {
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  background-color:transparent;
+  text-decoration: none;
+  transition: 0.6s ease;
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 25px;
+  color: white;
+  left: 350px;
+  top: 13px;
+  position:absolute;
+  z-index: 2;
+}
+
+.homebtn:hover{
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.ventingtitle{
+  text-align: center;
+}
+
+.position{
+  position: absolute;
+  top: 100px;
+}

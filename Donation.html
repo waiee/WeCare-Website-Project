@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donation</title>
+</head>
+<body onload="get()">
+
+
+<a class="homebtn" href="./newwecaremain.html">Home</a>
+<div class="form">
+  <div class="header">
+    <img src="./IMG_2488.PNG" class="logo" />
+    <h2 class = "WeCare">WeCare</h2>
+    <h1>Donation</h1>
+  </div>
+
+  <div class="container0">
+    <h2>Select an amount</h2>
+    <p1 style="font-size: 200%;">RM</p1>
+    <input id="donate" type="number" min="1000" max="1000000" name="amount" style="font-size: 200%;" required>
+    <p> </p><br>
+    <button onclick="myFunction()">OK</button>
+
+    <p id="amount">Amount of donation must be greater than 1000,lees than 1 000 000 </p>
+  
+  </div>
+
+<p id="donation"></p>
+
+
+
+<div class="container">
+  <div class="header">
+      <h1>Personal Information</h1>
+  </div>
+  <form class="form" id="form">
+      <div class="form-control">
+          <label>Name</label>
+          <input type="text" placeholder="name" id="name" >
+          <small>Error message</small>
+      </div>
+
+      <div class="form-control">
+          <label>Email</label>
+          <input type="email" placeholder="email" id="email" >
+          <small>Error message</small>
+      </div>
+
+      <div class="form-control">
+          <label>Phone Number</label>
+          <input type="number" placeholder="phone number" id="phone_number">
+          <small>Error message</small>
+      </div>
+      
+      <button>Submit</button>
+  </form>
+</div>
+
+  <div class="pic">
+    <img id="pic" style="display:none" src="Shuang_QRcode.jpg" width="500px" height="575px">
+    <button type="button" onclick="document.getElementById('pic').style.display='block'">Donate now</button>
+  </div>
+
+
+
+
+  <div class="header">
+    <h1>Payment details</h1>
+  </div>
+
+  <div class="container1">
+        <label style="font-size: 125%;">Payment Method:</label>
+        <spam >eWallet balance</spam>
+
+    <p style="font-size: 200%;"> </p>
+
+      <button type="button" style="width: 150px;" 
+      onclick="document.getElementById('date').innerHTML = Date()">Date and Time.</button>
+      
+      <p id="date"></p>
+
+    <p style="font-size: 200%;"> </p>
+  
+    <div class="form-control">
+        <label style="font-size: 125%;">Reference Number:</label>
+        <input type="text" placeholder="eWallet Ref.no" id="ref_no">
+    </div>
+    <p style="font-size: 200%;"> </p>
+
+    <button onclick="save()">Finish donation</button>
+   
+
+    <p style="font-size: 200%;" id="savedText"></p>
+ 
+   
+  </div>
+
+</div>
+
+
+</body>
+
+
+
+<script>
+
+function myFunction() {
+  var inpObj = document.getElementById("donate");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("donation").innerHTML = "Please try again";
+    document.getElementById("donation").style.color = "red";
+  } else {
+    document.getElementById("donation").innerHTML = "Amount of donation has been comfirmed";
+    document.getElementById("donation").style.paddingLeft = "40px";
+    document.getElementById("donation").style.color = "green";
+  }
+} 
+
+
+//The amount of donation must be greater than 1000,lees than 1 000 000 
+
+var txt = "";
+var minnmax = {p:"The amount of donation must be greater than", min:1000, p2:", less than", max:1000000}; 
+var x;
+for (x in minnmax) {
+  txt += minnmax[x] + " ";
+}
+document.getElementById("amount").innerHTML = txt;
+
+
+
+  const form = document.getElementById('form');
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const phone_number = document.getElementById('phone_number');
+
+  form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      checkInputs();
+  });
+
+  function checkInputs() {
+      const nameValue = name.value.trim();
+      const emailValue = email.value.trim();
+      const phone_numberValue = phone_number.value.trim();
+
+      if(nameValue === '') {
+          setErrorFor(name, 'Name must be filled out');
+      }
+      else {
+          setSuccessFor(name);
+      }
+
+      if(emailValue === '') {
+          setErrorFor(email, 'Email must be filled out');
+      }
+      else {
+          setSuccessFor(email);
+      }
+
+      if(phone_numberValue === '') {
+          setErrorFor(phone_number, 'Phone Number must be filled out');
+      }
+      else {
+          setSuccessFor(phone_number);
+      }
+  }
+
+
+
+  function setErrorFor(input) {
+      const formControl = input.parentElement;
+      formControl.className = 'form-control error';
+  }
+
+  function setSuccessFor(input) {
+      const formControl = input.parentElement;
+      formControl.className = 'form-control success';
+  }
+
+  var storedItem = localStorage.getItem("storedItem");
+  
+  function save(){
+    
+    var Item = document.getElementById("donate").value;
+    localStorage.setItem("storedItem",Item);
+    document.getElementById("savedText").innerHTML = "Thank you for donating your money to WECARE. Donation= RM" + Item;
+
+ 
+  }
+
+  function get(){
+    localStorage.getIem("storedItem");
+    document.getElementById("openedText").innerHTML = storedItem;
+  }
+
+</script>
+ 
+<style>
+
+  * {
+
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
+}
+.logo {
+    position:absolute;
+    width: 75px;
+    cursor: pointer;
+    left: 0px;
+    top: 23px;
+  }
+
+.WeCare {
+    position: absolute;
+    color: #fff;
+    font-size: 30px;
+    top: 40px;
+    left: 73px;
+}
+
+.homebtn {
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    background-color:transparent;
+    text-decoration: none;
+    transition: 0.6s ease;
+    display: inline-block;
+    list-style-type: none;
+    margin-top: 25px;
+    color: white;
+    left: 50px;
+    top: 100px;
+    position:absolute;
+}
+
+.homebtn:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+  
+  body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(./GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+  }
+  
+  .container {
+      background-color: lightgray;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+      overflow: hidden;
+      width: 800px;
+      max-width: 100%;
+  }
+
+  .container0 {
+     background-color: lightgray;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+      overflow: hidden;
+      width: 800px;
+      max-width: 100%;
+      padding: 20px 40px;
+  }
+
+  .container1 {
+     background-color: lightgray;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
+      overflow: hidden;
+      width: 800px;
+      max-width: 100%;
+      padding: 20px 40px;
+  }
+  
+  .header {
+      background-color: lightgrey;
+      border-bottom: 1px solid lightsteelblue;
+      padding: 20px 40px;
+  }
+  
+  .header h2{
+      margin: 0;
+  }
+  
+  .form {
+      padding: 30px 40px;
+  }
+  
+  .form-control {
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+      position: relative;
+  }
+  
+  .form-control label {
+      display: inline-block;
+      margin-bottom: 5px;
+  }
+  
+  .form-control input {
+      border: 2px solid #f0f0f0;
+      border-radius: 4px;
+      display: block;
+      font-size: 14px;
+      padding: 10px;
+      width: 100%;
+  }
+  
+  .form-control.success input {
+      border-color: #2ecc71;
+  }
+  
+  .form-control.error input {
+      border-color: #e74c3c;
+  }
+  
+  .form-control small {
+      visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+  
+  .form-control.error small {
+      color: #e74c3c;
+      visibility: visible;
+  }
+  
+  .form button {
+      background-color: rgb(9, 69, 94);
+      border: 2px solid rgb(9, 69, 94);
+      border-radius: 4px;
+      color: #fff;
+      display: block;
+      font-family: inherit;
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+  }
+
+  .pic{
+      padding: 150px;
+      
+  }
+
+
+  </style>
+  
+
+
+</html>

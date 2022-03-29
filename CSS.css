@@ -1,0 +1,141 @@
+
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body{
+	font-size: 20px;
+	font-family: 'Lucida Sans', sans-serif;
+  margin: 50px;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-image: url(https://cdn.discordapp.com/attachments/259294100099039232/815944159255986207/GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+  font-weight: 300;
+  margin: 100px;
+  padding: 10px;
+  font-size: 50px;
+  background-color: #444;
+  color: #fff;
+}
+
+.logo {
+  position: fixed;
+  width: 100px;
+  cursor: pointer;
+  left: 100px;
+  top:6px;
+}
+
+.WeCare {
+  position: fixed;
+  color: #fff;
+  font-size: 30px;
+  top: 10px;
+  left: 200px;
+}
+
+.homebtn {
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  background-color:transparent;
+  text-decoration: none;
+  transition: 0.6s ease;
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 25px;
+  color: white;
+  left: 350px;
+  position:fixed;
+  top:10px
+}
+
+.homebtn:hover{
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.question{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.answers {
+  margin-bottom: 10px;
+  text-align: left;
+  display: inline-block;
+}
+
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+button#previous{
+  font-family: 'Lucida Sans', sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+button#next{
+  font-family: 'Lucida Sans', sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+button#submit{
+  font-family: 'Lucida Sans', sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}

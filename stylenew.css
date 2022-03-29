@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./GettyImages_482194715-56a1329e5f9b58b7d0bcf666.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.row {
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+
+.col {
+  flex-basis: 50%;
+}
+h1 {
+  color: #fff;
+  font-size: 100px;
+}
+
+p {
+  color: black;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.col .white {
+  color: white;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+button {
+  cursor: pointer;
+  width: 80px;
+  color: black;
+  font-size: 12px;
+  padding: 12px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+  text-decoration: none;
+  transition: transform 0.6s ease;
+}
+
+button:hover {
+  background-color: turquoise;
+  color: #000;
+}
+
+.card {
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 12px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image: url(./9866fd9fb0d3252d59c0212290c16967.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+}
+
+.card1 {
+  background-image: url(./AC715E14-678F-49A1-B9EF-BF8AF47EB73B.PNG);
+}
+.card2 {
+  background-image: url(./3425895E-97FF-4D31-B79B-C2EB5B966361.PNG);
+}
+.card3 {
+  background-image: url(./69091090-15D8-48D8-8955-DD0CDD684322.PNG);
+}
+.card4 {
+  background-image: url(./A7524154-5DDE-4E1E-AF6C-5F1DD2FADB00.PNG);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h5 {
+  color: black;
+  text-shadow: 0 0 5px #999;
+}
+
+.btn {
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s ease;
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 25px;
+}
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

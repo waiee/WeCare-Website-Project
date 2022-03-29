@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
+    <title>wecare.com</title>
+    <link type="text/css" rel="stylesheet" href="./stylenew.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="./IMG_2488.PNG" class="logo" />
+        <nav>
+          <ul>
+            <li>
+              <a class="btn" href="./newwecaremain.html">Home</a>
+            </li>
+            <li>
+              <a class="btn" href="./aboutpage.html">About</a>
+            </li>
+            <li><a class="btn" href="./contactpage.html">Contact</a></li>
+          </ul>
+        </nav>
+        <img src="" class="menu-icon" />
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1>WeCare</h1>
+          <p class="white">What are you feeling right now is all matter.</p>
+        </div>
+        <div class="col">
+          <div onclick="ventingpage()" class="card card1">
+            <h5 onclick="ventingpage()">Venting Platform</h5>
+            <p onclick="ventingpage()">
+              How's your day? Vent out your feelings now!
+            </p>
+          </div>
+          <div onclick="donationpage()" class="card card2">
+            <h5 onclick="donationpage()">Donation</h5>
+            <p onclick="donationpage()">
+              Make some donation today, someone might need it.
+            </p>
+          </div>
+          <div onclick="mentaltestpage()" class="card card3">
+            <h5 onclick="mentaltestpage()">Mental Health Test</h5>
+            <p onclick="mentaltestpage()">
+              Feeling good? Go check out your mental health status today!
+            </p>
+          </div>
+          <div onclick="bookingpage()" class="card card4">
+            <h5 onclick="bookingpage()">Booking</h5>
+            <p onclick="bookingpage()">
+              Make an appointment at your nearest mental health centre!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      ///// Home Button reload page /////
+      function reloadpage() {
+        location.reload();
+      }
+
+      //// about page //////
+      function aboutpage() {
+        location.href();
+      }
+      //venting function page//
+      function ventingpage() {
+        location.href = "./ventingmain.html";
+      }
+
+      //Donation function page//
+      function donationpage() {
+        location.href = "./Donation.html";
+      }
+      // mental health test function page//
+      function mentaltestpage() {
+        location.href = "./HTML.html";
+      }
+      //booking function page//
+      function bookingpage() {
+        location.href = "./booking.html";
+      }
+    </script>
+  </body>
+</html>

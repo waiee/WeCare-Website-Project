@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wecare.com</title>
+    <link href="layout.css" rel="stylesheet" />
+    <script href="function.js" type="text/javascript"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      href="function.js"
+    ></script>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <!-- Main Page -->
+  </head>
+  <body>
+
+    <a class="homebtn" href="./newwecaremain.html">Home</a>
+    <img src="./IMG_2488.PNG" class="logo" />
+    <h2 class = "WeCare">WeCare</h2>
+    <div class="position">
+      <br />
+      <div class="col">
+
+        <div class="container">
+          <!--Greetings-->
+            <h2 style="color: white;" class="ventingtitle">Welcome to Venting Platform!</h2>
+            <h3 style="color:white"id="greetings">Hi there! What's your name?</h3>
+
+            <!--Text area and button-->
+            <form id="resetarea" class="form-container">
+              <textarea
+                type="text"
+                placeholder="Type Text.."
+                name="msg"
+                id="textArea"
+                required=""
+              ></textarea>
+              <button
+                type="button"
+                id="ContinueBtn"
+                class="btn btn-success btn-lg btn-success"
+              >
+                Next
+              </button>
+              <button
+                type="button"
+                id="FinishBtn"
+                class="btn btn-danger btn-lg btn-close"
+              >
+                Done Venting
+              </button>
+              <button type="submit" class="btn btn-info btn-lg btn-send">
+                Reset
+              </button>
+            </form>
+
+            <!-------------------------- Logic -------------------------->
+
+            <script src="./function.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
